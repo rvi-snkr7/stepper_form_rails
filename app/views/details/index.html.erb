@@ -1,0 +1,13 @@
+<h1>Details#index</h1>
+<p>Find me in app/views/details/index.html.erb</p>
+<ul>
+  <% @details.each do |d| %>
+    <li>
+      <%= d.name %><br>
+      <%= d.mobile %><br>
+      <%= d.child %><br>
+      <%= d.religion %><br>
+    </li>
+  <% end %>
+</ul>
+<%=link_to "form" ,new_detail_path %>

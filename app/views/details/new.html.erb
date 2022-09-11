@@ -1,0 +1,26 @@
+<h1>New Article</h1>
+
+<%= form_with model: @detail do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :mobile %><br>
+    <%= form.text_area :mobile %>
+  </div>
+
+  <div>
+    <%= form.label :child %><br>
+    <%= form.text_area :child %>
+  </div>
+  <div>
+    <%= form.label :religion %><br>
+    <%= form.text_area :religion %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
