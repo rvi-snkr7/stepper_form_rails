@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  root 'details#index'
-  resources :details
+  root 'api/prominent#index'
+  resources :member
 
   namespace :api do
-    namespace :v1 do
-      resources :details
-    end
+    # resources :prominent
+      post '/detail/prominent', to: "prominent#create"
   end
 end

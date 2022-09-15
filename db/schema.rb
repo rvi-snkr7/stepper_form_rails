@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_11_135941) do
+ActiveRecord::Schema.define(version: 2022_09_15_104923) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,21 @@ ActiveRecord::Schema.define(version: 2022_09_11_135941) do
     t.string "religion"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "father"
+    t.string "mother"
+    t.string "spouse"
+    t.string "email"
+    t.date "dob"
+    t.string "gender"
+    t.string "category"
+  end
+
+  create_table "mobiles", force: :cascade do |t|
+    t.string "number"
+    t.bigint "detail_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["detail_id"], name: "index_mobiles_on_detail_id"
   end
 
 end

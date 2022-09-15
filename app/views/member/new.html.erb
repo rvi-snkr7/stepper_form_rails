@@ -1,0 +1,59 @@
+<h1>New Article</h1>
+
+<%= form_with model: @detail do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_area :name %>
+  </div>
+
+  <div>
+    <%= form.label :mobile %><br>
+    <%= form.text_area :mobile %>
+  </div>
+
+  <div>
+    <%= form.label :child %><br>
+    <%= form.text_area :child %>
+  </div>
+  <div>
+    <%= form.label :religion %><br>
+    <%= form.text_area :religion %>
+  </div>
+  <div>
+    <%= form.label :father %><br>
+    <%= form.text_area :father %>
+  </div>
+  <div>
+    <%= form.label :mother %><br>
+    <%= form.text_area :mother %>
+  </div>
+  <div>
+    <%= form.label :spouse %><br>
+    <%= form.text_area :spouse %>
+  </div>
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_area :email %>
+  </div>
+  <div>
+    <%= form.label :dob %><br>
+    <%= form.text_area :dob %>
+  </div>
+  <div>
+    <%= form.label :gender %><br>
+    <%= form.text_area :gender %>
+  </div>
+  <div>
+    <%= form.label :category %><br>
+    <%= form.text_area :category %>
+  </div>
+
+  <div>
+    <%= form.label :degree %><br>
+    <%= form.text_area :degree %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
