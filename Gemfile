@@ -5,6 +5,7 @@ ruby '2.7.0'
 gem 'pg', '~> 1.4', '>= 1.4.1'
 gem 'rack-cors', '~> 1.1', '>= 1.1.1'
 
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.8', '>= 5.2.8.1'
 # Use sqlite3 as the database for Active Record
@@ -50,6 +51,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'ruby-debug-ide', '0.4.24'
+  gem 'debase', '~> 0.2.4.1'
 end
 
 group :test do

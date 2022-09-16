@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   namespace :api do
     # resources :prominent
       post '/detail/prominent', to: "prominent#create"
+    # post '/detail/prominent', to: "prominent#abc"
+
+
   end
 end

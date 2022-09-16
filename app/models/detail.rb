@@ -13,4 +13,5 @@ class Detail < ApplicationRecord
   # validates :degree, presence: true
 
   has_many :mobiles
+  has_one_attached :image
 end
