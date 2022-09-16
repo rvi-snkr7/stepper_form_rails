@@ -2,12 +2,13 @@ class Api::ProminentController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    @details = Mobile.all.pluck(:detail_id)
-    @details.each do |id|
-      @data= Detail.where(id: id)
+    # @details = Mobile.all.pluck(:detail_id)
+    # @details.each do |id|
+    #   @data= Detail.where(id: id)
+    @details=Detail.all
+    render json: @details
     end
-    render json: @data
-  end
+
 
   def show
     @detail = Detail.find(params[:id])
@@ -25,18 +26,18 @@ class Api::ProminentController < ApplicationController
     gender = params[:gender]
     child =params[:child]
     religion=params[:religion]
-    image = params[:file]
+    # image = params[:file]
     detail = Detail.new
     detail.name = name
-    detail.gender = gender
-    detail.child = child
+    # detail.gender = gender
+    # detail.child = child
     detail.religion = religion
     detail.save!
-    detail.image.attach(image)
+    # detail.image.attach(image)
     # mobile.each do |id|
     #   Mobile.where(number: id, detail_id: detail.id).first_or_create!
     # end
-    data = detail.as_json(only: [:name, :gender,:child,:religion,:file,:mobile])
+    data = detail.as_json(only: [:name,:religion,mobile:[]])
     render json: data
     # if @detail.save
     #   render json: @detail
