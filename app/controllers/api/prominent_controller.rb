@@ -21,7 +21,7 @@ class Api::ProminentController < ApplicationController
 
   def create
     name = params[:name]
-    mobile = params[:mobile]
+    # mobile = params[:mobile]
     gender = params[:gender]
     child =params[:child]
     religion=params[:religion]
@@ -33,10 +33,10 @@ class Api::ProminentController < ApplicationController
     detail.religion = religion
     detail.save!
     detail.image.attach(image)
-    mobile.each do |id|
-      Mobile.where(number: id, detail_id: detail.id).first_or_create!
-    end
-    data = detail.as_json(only: [:name, :gender,:child,:religion,:file], include: [mobiles: { only: [:number] }])
+    # mobile.each do |id|
+    #   Mobile.where(number: id, detail_id: detail.id).first_or_create!
+    # end
+    data = detail.as_json(only: [:name, :gender,:child,:religion,:file,:mobile])
     render json: data
     # if @detail.save
     #   render json: @detail
